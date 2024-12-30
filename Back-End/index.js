@@ -271,6 +271,10 @@ app.get("/getChatgptApi",(req,res)=>{
   res.json({ apiUrl: process.env.MyApiKey });
 })
 
+app.use("/",(req,res)=>{
+  res.send("welcome  to the server home")
+})
+
 //connection to the mongodb
 connectToThemongodb(process.env.MONGO_DB)
 .then(()=>console.log("mongodb is connected"))
